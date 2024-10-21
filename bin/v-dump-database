@@ -56,7 +56,7 @@ fi
 parse_object_kv_list "$db_data"
 
 # Creating temporary directory
-tmpdir=$(mktemp -p $BACKUP -d "tmp.$database.XXXXXXXXXX")
+tmpdir=$(mktemp -p /tmp -d "tmp.$database.XXXXXXXXXX")
 
 # Dump database
 dump="$tmpdir/$database.$TYPE.sql"
