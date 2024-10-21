@@ -82,7 +82,7 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 
 # Creating temporary directory
-tmpdir=$(mktemp -p $BACKUP -d "tmp.$database.XXXXXXXXXX")
+tmpdir=$(mktemp -p /tmp -d "tmp.$database.XXXXXXXXXX")
 
 # Suspend database
 $BIN/v-suspend-database $owner $database > /dev/null 2>&1
