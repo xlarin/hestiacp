@@ -194,7 +194,7 @@ if [ -z "$BACKUP_TEMP" ]; then
 fi
 
 # Creating temporary directory
-tmpdir=$(mktemp -p $BACKUP_TEMP -d)
+tmpdir=$(mktemp -p /tmp -d)
 
 if [ "$?" -ne 0 ]; then
 	echo "Can't create tmp dir $tmpdir" | $SENDMAIL -s "$subj" "$email" "yes"
