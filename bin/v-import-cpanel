@@ -49,7 +49,7 @@ else
 fi
 
 # Creating temporary directory
-tmpdir=$(mktemp -p "$BACKUP_TEMP" -d)
+tmpdir=$(mktemp -p /tmp -d)
 
 tput setaf 2
 echo "Checking provided file..."
